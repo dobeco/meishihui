@@ -1,4 +1,4 @@
-# msh-app
+# 美食汇WebApp
 
 > 技术栈 Vue+Vuex+router+axios+es6+webpack
 
