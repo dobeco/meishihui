@@ -36,12 +36,12 @@
                 <input type="password" maxlength="8" placeholder="密码" v-else v-model="pwd">
                 <div class="switch_button" :class="showPwd?'on':'off'" @click="showPwd=!showPwd">
                   <div class="switch_circle" :class="{right: showPwd}"></div>
-                  <span class="switch_text">{{showPwd ? 'abc' : '...'}}</span>
+                  <span class="switch_text"></span>
                 </div>
               </section>
               <section class="login_message">
                 <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
-                <img class="get_verification" src="http://localhost:4000/captcha" alt="captcha"
+                <img class="get_verification" src="http://106.13.94.152:4000/captcha" alt="captcha"
                   @click="getCaptcha" ref="captcha">
               </section>
             </section>
@@ -188,7 +188,7 @@
       // 获取一个新的图片验证码
       getCaptcha () {
         // 每次指定的src要不一样
-        this.$refs.captcha.src = 'http://localhost:4000/captcha?time='+Date.now()
+        this.$refs.captcha.src = 'http://106.13.94.152:4000/captcha?time='+Date.now()
       }
     },
 
